@@ -120,5 +120,135 @@ solve([[3, 5, 7, 12],
 }
 solve([[20, 40],
     [10, 60]]
+   )
+   //Arrays exersice 1
+   function solve(arr){
+    let delimiter = arr[arr.length -1];
+    arr.pop();
+    console.log(arr.join(delimiter));
+   }
+   solve(['How about no?', 
+   'I',
+   'will', 
+   'not', 
+   'do', 
+   'it!', 
+   '_']
+   )
+   //Arrays exersice 2
+   function solve(arr){
+    let steps = Number(arr[arr.length -1]);
+    arr.pop();
+    for (let index = 0; index <= arr.length-1; index+=steps) {
+        console.log(arr[index]);
+    }
+   }
+   solve(
+    ['dsa',
+    'asd', 
+    'test', 
+    'tset', 
+    '2']
+   )
+   function solve(arr){
+    
+    let newArr = [];
+    for (let index = 0; index <= arr.length-1; index++) {
+        let comm = arr[index];
+        if(comm === 'add'){
+            newArr[index] = index+1 
+        }else if(comm === 'remove'){
+            newArr.pop();
+        }
+    }
+    if(newArr.length === 0){
+        console.log('Empty')
+    }else{
+    newArr.forEach(element => {
+        console.log(element)
+    });
+}
+   }
+   solve(['remove', 
+   'remove', 
+   'remove']
+   
+   )
+   //4
+   function solve(arr){
+    let steps = Number(arr[arr.length -1]);
+    arr.pop();
+
+    for (let index = 0; index < steps; index++) {
+        let em = arr.pop();
+        arr.unshift(em);
+    
+    }
+    console.log(arr.join(' '))
+   }
+   solve(['Banana', 
+   'Orange', 
+   'Coconut', 
+   'Apple', 
+   '15']
+   
+   )
+   //5
+   function solve(arr){
+    let prevNum = 0;
+    let newArr = [];
+
+
+    for (let index = 0; index <= arr.length -1; index++) {
+        if(prevNum >= arr[index]){
+            arr[index] = null;
+
+        }else{
+            prevNum = arr[index];
+            newArr[index] = arr[index]
+
+        }
+        
+    
+    }
+    newArr.forEach(element => {
+        
+        console.log(element)}
+    );
+   }
+   solve([1, 
+    3, 
+    8, 
+    4, 
+    10, 
+    12, 
+    3, 
+    2, 
+    24]
+    
+   )
+   //6
+   function solve(arr){
+      arr.sort((x,y) =>{
+       if( x.length > y.length){
+           return 1;
+       }else if(x.length === y.length){
+           return x >= y;
+       }else{
+           return -1;
+       }
+      } 
+      );
+    
+      arr.forEach(element => {
+          console.log(element)
+      });
+      
+   }
+   solve(['test', 
+   'Deny', 
+   'omen', 
+   'Default']
+
    )*/
    
